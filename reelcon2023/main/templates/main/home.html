@@ -1,1 +1,30 @@
-<h1>Hello welcome home</h1>
+<html>
+<head>
+    <title>Bootstrap Timer Example</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Include Countdown.js CSS -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.css">
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Include Countdown.js -->
+    <script src="https://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Bootstrap Timer</h1>
+        <div id="timer" class="text-center"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#timer').countdown('2023/12/31', function(event) {
+                $(this).html(event.strftime('%D days %H:%M:%S'));
+            });
+        });
+    </script>
+</body>
+</html>
